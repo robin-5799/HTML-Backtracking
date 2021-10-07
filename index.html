@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="external.css">
+</head>
+<body>   
+  <h1>Backtracking</h1>
+  <p>Copyright &copy;2002 by David Matuszek</p>
+  <p>Backtracking is a form of recursion.</p>
+  <p>The usual <em>scenario</em> is that you are <i>faced</i> with a number of options, and you must choose one of these. After you make your <strong>choice</strong> you will get a new set of <b>options</b>; just what set of options you get depends on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state; if you didn't, it isn't.</p>
+  <p>Conceptually, you start at the <sub>root</sub> of a tree; the tree probably <sup>has</sup> some good leaves and some bad leaves, though it may be that the leaves are all good or all bad. You want to get to a good leaf. At each node, beginning with the root, you choose one of its children to move to, and you keep this up until you get to a leaf.</p>
+  <p>Suppose you get to a bad leaf. You <ins>backtrack</ins> to continue <del>the</del> search for <strike>a good leaf by revoking</strike> your most recent choice, and trying out the next option in that set of options. If you run out of options, revoke the choice that got you here, and try another choice at that node. If you end up at the root with no options left, there are no good leaves to be found.</p>
+  <p>This needs an example.</p>
+  <center><img src="images/treesearch.gif"/></center>
+  <ol>
+    <li>Starting at Root, your options are A and B. You choose A.</li>
+    <li>At A, your options are C and D. You choose C.
+    C is bad. Go back to A.</li>
+    <li>At A, you have already tried C, and it failed. Try D.
+    D is bad. Go back to A.</li>
+    <li>At A, you have no options left to try. Go back to Root.</li>
+    <li>At Root, you have already tried A. Try B.</li>
+    <li>At B, your options are E and F. Try E.</li>
+    <li>E is good. Congratulations!</li>
+  </ol>
+  <pre>
+    boolean solve(Node n) {
+      if n is a leaf node {
+          if the leaf is a goal node, return true
+          else return false
+      } else {
+          for each child c of n {
+              if solve(c) succeeds, return true
+          }
+          return false
+      }
+    }
+  </pre>
+  <pre>
+    int main(){
+      int a;
+      int b;
+      int sum=a+b;
+    }
+  </pre>
+  <a href="https://www.google.com/">Go to google</a>
+  <a href="author.html">About the Author</a>
+  <a href="https://www.prepbytes.com">Go to PrepBytes</a>
+
+  <form>
+    <fieldset>
+      <legend>Login Form</legend>
+    <label>UserName</label>
+    <br>
+    <input type="text" id="username">
+    <br>
+    <label>Password</label>
+    <br>
+    <input type="text" value="Default Pass" id="password" style="color: brown;">
+    <br>
+    <label>Are you Sure</label>
+    <input type="checkbox">
+    <br>
+    <input type="button" value="submit">
+    </fieldset>
+
+  </form>
+</body>
+
+</html>
