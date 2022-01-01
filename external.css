@@ -1,6 +1,22 @@
-body{
-    background-color: rgb(18, 121, 40);
+h1{
+    margin-bottom: -15px;
+    margin-top: -5px;
 }
-p{
-    background-color: rgb(168, 218, 52);
+pre{
+    color: rgb(161, 53, 53);
+    font-weight: 400;
+    font-size: 16px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+.lastpre{
+    margin-left: -30px;
+}
+.lastpre i{
+    color: blue;
+}
+.lastpre b{
+    color: black;
+    font-size: 18px;
 }
